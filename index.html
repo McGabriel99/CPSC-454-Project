@@ -36,8 +36,8 @@
     <br>
     <form id="applyForm">
         <label for="studentIdApply">Apply for University Admission</label> <br>
-        <input type="number" id="studentIdApply" name="studentId" placeholder="student name"> <br>
-        <input type="text" id="stutdentNameApply" name="studentName" placeholder="student id"> <br>
+        <input type="number" id="studentIdApply" name="studentId" placeholder="student id"> <br>
+        <input type="text" id="stutdentNameApply" name="studentName" placeholder="student name"> <br>
         <button type="button" onclick="applyToUni()">Apply for University</button>
     </form>
     <br>
@@ -77,10 +77,10 @@
             let studentId = document.getElementById("studentIdApply").value;
             let studentName = document.getElementById("stutdentNameApply").value;
             
-            let inputData = {student_id: studentId, name: studentName, status: "pending"};
+            let inputData = {student_id: studentId, name: studentName};
             
             fetch('/apply/', {
-                method: 'post',
+                method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(inputData)
             })
@@ -95,8 +95,6 @@
         function withdrawApp() {
             let studentId = document.getElementById("studentIdWithdraw").value;
             
-            studentId = parseInt(studentId);
-
             fetch(`/withdraw/${studentId}`)
                 .then(response => response.json())
                 .then(data => {
