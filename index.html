@@ -95,9 +95,13 @@
         function withdrawApp() {
             let studentId = document.getElementById("studentIdWithdraw").value;
             
-            fetch(`http://localhost:8000/withdraw/${studentId}`)
+            fetch(`http://localhost:8000/withdraw/${studentId}`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'}
+            })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data);
                     document.getElementById("statusResult").innerText = `Student ID: ${data.student_id}, Status: ${data.status}`;
                 })
                 .catch(error => {
