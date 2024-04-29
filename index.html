@@ -64,7 +64,7 @@
             
             studentId = parseInt(studentId);
 
-            fetch(`/status/${studentId}`)
+            fetch(`http://localhost:8000/status/${studentId}`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("statusResult").innerText = `Student ID: ${data.student_id}, Status: ${data.status}`;
@@ -79,7 +79,7 @@
             
             let inputData = {student_id: studentId, name: studentName};
             
-            fetch('/apply/', {
+            fetch('http://localhost:8000/apply/', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(inputData)
@@ -95,7 +95,7 @@
         function withdrawApp() {
             let studentId = document.getElementById("studentIdWithdraw").value;
             
-            fetch(`/withdraw/${studentId}`)
+            fetch(`http://localhost:8000/withdraw/${studentId}`)
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById("statusResult").innerText = `Student ID: ${data.student_id}, Status: ${data.status}`;
