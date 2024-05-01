@@ -40,7 +40,7 @@ Replace the yourIPAddress with your actual IP address of the backend virtual mac
 
 Once replaced, start up the backend with the uvicorn command above, and then startup the frontend as well.
 
-To change between either light/dark mode, click on the button of your choice.
+To change between either light/dark mode, click on the button of your choice. The light/dark mode was done by Hayley Huynh, a graduate student. 
 
 To Apply for University Admission, enter a student id, any amount of numbers, and a student name, any name length. Once filled out, click on the Apply for University and if you check on the applications.db file on the backend virtual machine, you should see it should update and have the student id, name, and status in the database.
 
