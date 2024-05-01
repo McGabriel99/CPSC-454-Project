@@ -16,4 +16,12 @@ Use the requirements.txt file in the backend folder to install required librarie
 py -m pip install -r backend/requirements.txt
 ```
 
+To run the database use the following command.
+
+```bash
+uvicorn main:app  --reload --host 0.0.0.0 --port 8000
+```
+
 ## Usage
+
+To start the
