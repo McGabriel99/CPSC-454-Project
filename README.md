@@ -1,5 +1,7 @@
 # CPSC-454-Project
 
+Group 3: Zedrick Bernal, Andres Gallego, Gurman Gill, Hayley Huynh, Jong Kim, Luke Pina, Mc Gabriel Fernandez
+
 The basis of this project is a University Student Admission Status application. This is where a student can apply for admission, check their status, and withdraw their admission from the university. This application is meant to run on two virtual machines, one hosting the frontend and the other is the backend.
 
 ## Installation
